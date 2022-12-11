@@ -1,0 +1,2401 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+<title>Test Page</title>
+<style>
+html {
+ scroll-padding-top: 150px; /* height of sticky header */
+}
+body {
+ margin-top: 150px;
+ margin-left: 0;
+ margin-right: 0;
+ margin-bottom: 250px;
+ font-family: trebuchet ms, arial, verdana, sans-serif;
+ text-decoration: none;
+ background: #F1F1F1;
+}
+.div-outter {
+ display: flex;
+ flex-wrap: wrap;
+ margin: 50px;
+}
+.header {
+ width: 100%;
+ height: 100px;
+ position: fixed;
+ top: 0;
+ left: 0;
+ z-index: 2;
+ background-color: #FFFFFF;
+ -webkit-box-shadow: 0 4px 4x rgba(0, 0, 0, 0.2);
+ -moz-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+ box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+}
+h1 {
+ width: 100%;
+ height: 100%;
+ margin: 0;
+ padding: 0;
+ text-align: center;
+ line-height: 100px;
+ font-size: 40px;
+ color: #000000;
+ text-transform: uppercase;
+}
+h2 {
+ margin-top: 0px;
+ margin-left: 50px;
+ margin-right: 0;
+ margin-bottom: -50px;
+ font-size: 30px;
+ color: #000000;
+ text-transform: uppercase;
+}
+.div-inner {
+ display: block;
+ justify-content: space-between;
+ margin: 0px;
+ padding: 3px 3px;
+ border: none;
+}
+button, .dark, .mid, .dark {
+ width: 150px;
+ height: 150px;
+ margin: 0;
+ padding: 8px;
+ line-height: 230px;
+ border: none;
+ color: #FFFFFF;
+ text-align: center;
+ font-size: 38px;
+ font-family: trebuchet ms, arial, verdana, sans-serif;
+}
+button.dark {
+ background-color: #1167b1;
+}
+button.mid {
+ background-color: #0086e4;
+}
+button.light {
+ background-color: #42b0ff;
+}
+
+button:hover, button:focus {
+ background-color: #024d8e;
+}
+
+/* BOTTOM MENU */
+.footer {
+ width: 100%;
+ height: 140px;
+ position: fixed;
+ bottom: 0;
+ left: 0;
+ z-index: 1;
+ background-color: #D8D8D8;
+ line-height: 140px;
+ text-align: center;
+ -webkit-box-shadow: 0 -1px 4x rgba(0, 0, 0, 0.07);
+ -moz-box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.07);
+ box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.07);
+}
+.iconspace {
+ width: 80%;
+ height: 100%;
+ padding-left: 10%;
+ padding-right: 10%;
+ text-align: justify;
+}
+.iconspace:after { 
+ content: ' ';
+ display: inline-block;
+ width: 100%;
+ height: 0
+}
+.iconspace > span {
+ display: inline-block;
+} 
+.icon {
+ width: 100px;
+ height: 100px;
+ margin: 0;
+ padding: 0;
+ vertical-align: middle;
+ opacity: 50%;
+}
+.icon:hover, icon:focus {
+ width: 100px;
+ height: 100px;
+ margin: 0;
+ padding: 0;
+ vertical-align: middle;
+ opacity: 100%;
+}
+/* SUBMENU */
+ul {
+ margin: 0;
+ padding: 0;
+ position: relative;
+ list-style: none;
+}
+
+/* submenu box */
+ul ul {
+ display: none;
+ position: absolute; 
+ top: 90%;
+ left: 10%; 
+ z-index: 2;
+ border: 1px solid #FFFFFF;
+ background: rgba(0, 0, 0, 0.8);
+ white-space: nowrap;
+}	
+
+ul li:hover > ul {
+ display: inherit;
+}	
+
+/* submenu links */
+ul ul li a {
+ margin: 0;
+ font-size: 40px;
+ padding-top: 20px;
+ padding-left: 40px;
+ padding-right: 80px;
+ padding-bottom: 20px;
+ color: #FFFFFF;
+ text-decoration: none;
+ border: none;
+ display: inherit;
+}
+ul ul li a:hover {
+ color: #39ca74;
+/* background-color: pink; */
+}
+
+
+/* green checkbox styles */
+.tasks-list-item {
+ padding-right: 20px;
+ cursor: pointer;
+ -webkit-user-select: none;
+ -moz-user-select: none;
+ -ms-user-select: none;
+ user-select: none;
+ float: left;
+}
+ .tasks-list-item + .tasks-list-item {
+}
+.tasks-list-cb {
+ display: none;
+}
+.check-box {
+ position: absolute;
+ top: 5%;
+ left: 5%;
+ display: block;
+ margin: 0px;
+ width: 40px;
+ height: 40px;
+ border: 4px solid #000;
+ border-radius: 24px;
+background-color: #FFFFFF;
+}
+
+.check-box:before {
+ content: '';
+ display: none;
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ margin: -8px 0 0 -10px;
+ height: 8px;
+ width: 16px;
+ border: solid #39ca74;
+ border-width: 0 0 4px 4px;
+ -webkit-transform: rotate(-45deg);
+ -moz-transform: rotate(-45deg);
+ -ms-transform: rotate(-45deg);
+ -o-transform: rotate(-45deg);
+ transform: rotate(-45deg);
+}
+.tasks-list-cb:checked ~ .check-box {
+ border-color: #000000;
+}
+.tasks-list-cb:checked ~ .check-box:before {
+ display: block;
+} */
+</style>
+</head>
+<body>
+<a id="top"></a>
+
+<!-- HEADER -->
+<div class="header">
+<h1>header</h1>
+</div>
+<!-- END HEADER -->
+
+
+
+<!-- START COVER TO COVER SECTION -->
+<h2>COVER TO COVER</h2>
+
+<div class="div-outter">
+
+<!-- GENESIS -->
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="dark">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb1" value="yes"><span class="check-box"></span></label>
+     Day 1
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/1/1">Genesis 1</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/1/2">Genesis 2</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/1/3">Genesis 3</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="dark">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb2" value="yes"><span class="check-box"></span></label>
+     Day 2
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/1/4>Genesis 4</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/1/5>Genesis 5</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/1/6>Genesis 6</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/1/7>Genesis 7</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="dark">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb3" value="yes"><span class="check-box"></span></label>
+     Day 3
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/1/8>Genesis 8</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/1/9>Genesis 9</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/1/10>Genesis 10</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/1/11>Genesis 11</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="dark">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb4" value="yes"><span class="check-box"></span></label>
+     Day 4
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/1/12>Genesis 12</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/1/13>Genesis 13</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/1/14>Genesis 14</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/1/15>Genesis 15</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="dark">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb5" value="yes"><span class="check-box"></span></label>
+     Day 5
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/1/16>Genesis 16</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/1/17>Genesis 17</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/1/18>Genesis 18</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="dark">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb6" value="yes"><span class="check-box"></span></label>
+     Day 6
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/1/19>Genesis 19</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/1/20>Genesis 20</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="dark">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb7" value="yes"><span class="check-box"></span></label>
+     Day 7
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/1/21>Genesis 21</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/1/22>Genesis 22</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/1/23>Genesis 23</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="dark">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb8" value="yes"><span class="check-box"></span></label>
+     Day 8
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/1/24>Genesis 24</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/1/25>Genesis 25</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="dark">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb9" value="yes"><span class="check-box"></span></label>
+     Day 9
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/1/26>Genesis 26</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/1/27>Genesis 27</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/1/28>Genesis 28</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="dark">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb10" value="yes"><span class="check-box"></span></label>
+     Day 10
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/1/29>Genesis 29</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/1/30>Genesis 30</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="dark">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb11" value="yes"><span class="check-box"></span></label>
+     Day 11
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/1/31>Genesis 31</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/1/32>Genesis 32</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="dark">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb12" value="yes"><span class="check-box"></span></label>
+     Day 12
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/1/33>Genesis 33</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/1/34>Genesis 34</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/1/35>Genesis 35</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="dark">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb13" value="yes"><span class="check-box"></span></label>
+     Day 13
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/1/36>Genesis 36</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/1/37>Genesis 37</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/1/38>Genesis 38</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="dark">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb14" value="yes"><span class="check-box"></span></label>
+     Day 14
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/1/39>Genesis 39</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/1/40>Genesis 40</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/1/41>Genesis 41</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="dark">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb15" value="yes"><span class="check-box"></span></label>
+     Day 15
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/1/42>Genesis 42</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/1/43>Genesis 43</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/1/44>Genesis 44</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="dark">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb16" value="yes"><span class="check-box"></span></label>
+     Day 16
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/1/45>Genesis 45</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/1/46>Genesis 46</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/1/47>Genesis 47</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="dark">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb17" value="yes"><span class="check-box"></span></label>
+     Day 17
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/1/48>Genesis 48</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/1/49>Genesis 49</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/1/50>Genesis 50</a></li
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+<!-- EXODUS -->
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="dark">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb18" value="yes"><span class="check-box"></span></label>
+     Day 18
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/2/1">Exodus 1</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/2/2">Exodus 2</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/2/3">Exodus 3</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="dark">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb19" value="yes"><span class="check-box"></span></label>
+     Day 19
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/2/4">Exodus 4</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/2/5">Exodus 5</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/2/6">Exodus 6</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="dark">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb20" value="yes"><span class="check-box"></span></label>
+     Day 20
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/2/7">Exodus 7</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/2/8">Exodus 8</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/2/9">Exodus 9</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="dark">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb21" value="yes"><span class="check-box"></span></label>
+     Day 21
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/2/10">Exodus 10</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/2/11">Exodus 11</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/2/12">Exodus 12</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="dark">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb22" value="yes"><span class="check-box"></span></label>
+     Day 22
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/2/13">Exodus 13</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/2/14">Exodus 14</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/2/15">Exodus 15</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="dark">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb23" value="yes"><span class="check-box"></span></label>
+     Day 23
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/2/16">Exodus 16</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/2/17">Exodus 17</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/2/18">Exodus 18</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="dark">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb24" value="yes"><span class="check-box"></span></label>
+     Day 24
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/2/19">Exodus 19</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/2/20">Exodus 20</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/2/21">Exodus 21</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="dark">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb25" value="yes"><span class="check-box"></span></label>
+     Day 25
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/2/22">Exodus 22</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/2/23">Exodus 23</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/2/24">Exodus 24</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="dark">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb26" value="yes"><span class="check-box"></span></label>
+     Day 26
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/2/25">Exodus 25</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/2/26">Exodus 26</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/2/27">Exodus 27</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="dark">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb27" value="yes"><span class="check-box"></span></label>
+     Day 27
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/2/28">Exodus 28</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/2/29">Exodus 29</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="dark">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb28" value="yes"><span class="check-box"></span></label>
+     Day 28
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/2/30">Exodus 30</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/2/31">Exodus 31</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/2/32">Exodus 32</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="dark">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb29" value="yes"><span class="check-box"></span></label>
+     Day 29
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/2/33">Exodus 33</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/2/34">Exodus 34</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/2/35">Exodus 35</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="dark">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb30" value="yes"><span class="check-box"></span></label>
+     Day 30
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/2/36">Exodus 36</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/2/37">Exodus 37</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/2/38">Exodus 38</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="dark">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb31" value="yes"><span class="check-box"></span></label>
+     Day 31
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/2/39">Exodus 39</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/2/40S">Exodus 40</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+
+<!-- LEVITICUS -->
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="dark">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb32" value="yes"><span class="check-box"></span></label>
+     Day 32
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/3/1">Leviticus 1</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/3/2">Leviticus 2</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/3/3">Leviticus 3</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/3/4">Leviticus 4</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="dark">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb33" value="yes"><span class="check-box"></span></label>
+     Day 33
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/3/5">Leviticus 5</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/3/6">Leviticus 6</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/3/7">Leviticus 7</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="dark">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb34" value="yes"><span class="check-box"></span></label>
+     Day 34
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/3/8">Leviticus 8</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/3/9">Leviticus 9</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="dark">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb35" value="yes"><span class="check-box"></span></label>
+     Day 35
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/3/10">Leviticus 10</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/3/11">Leviticus 11</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/3/12">Leviticus 12</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="dark">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb36" value="yes"><span class="check-box"></span></label>
+     Day 36
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/3/13">Leviticus 13</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="dark">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb37" value="yes"><span class="check-box"></span></label>
+     Day 37
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/3/14">Leviticus 14</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/3/15">Leviticus 15</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="dark">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb38" value="yes"><span class="check-box"></span></label>
+     Day 38
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/3/16">Leviticus 16</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/3/17">Leviticus 17</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/3/18">Leviticus 18</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="dark">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb39" value="yes"><span class="check-box"></span></label>
+     Day 39
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/3/19">Leviticus 19</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/3/20">Leviticus 20</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/3/21">Leviticus 21</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="dark">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb40" value="yes"><span class="check-box"></span></label>
+     Day 40
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/3/22">Leviticus 22</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/3/23">Leviticus 23</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="dark">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb41" value="yes"><span class="check-box"></span></label>
+     Day 41
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/3/24">Leviticus 24</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/3/25">Leviticus 25</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="dark">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb42" value="yes"><span class="check-box"></span></label>
+     Day 42
+    </button>
+   </a>
+   <ul>
+
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+
+<!-- NUMBERS -->
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="dark">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb43" value="yes"><span class="check-box"></span></label>
+     Day 43
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/4/1">Numbers 1</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/4/2">Numbers 2</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="dark">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb44" value="yes"><span class="check-box"></span></label>
+     Day 44
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/4/3">Numbers 3</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/4/4">Numbers 4</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="dark">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb45" value="yes"><span class="check-box"></span></label>
+     Day 45
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/4/5">Numbers 5</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/4/6">Numbers 6</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="dark">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb46" value="yes"><span class="check-box"></span></label>
+     Day 46
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/4/7">Numbers 7</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="dark">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb47" value="yes"><span class="check-box"></span></label>
+     Day 47
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/4/8">Numbers 8</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/4/9">Numbers 9</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/4/10">Numbers 10</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="dark">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb48" value="yes"><span class="check-box"></span></label>
+     Day 48
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/4/11">Numbers 11</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/4/12">Numbers 12</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/4/13">Numbers 13</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="dark">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb49" value="yes"><span class="check-box"></span></label>
+     Day 49
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/4/14">Numbers 14</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/4/15">Numbers 15</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="dark">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb50" value="yes"><span class="check-box"></span></label>
+     Day 50
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/4/16">Numbers 16</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/4/17">Numbers 17</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/4/18">Numbers 18</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="dark">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb51" value="yes"><span class="check-box"></span></label>
+     Day 51
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/4/19">Numbers 19</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/4/20">Numbers 20</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/4/21">Numbers 21</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="dark">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb52" value="yes"><span class="check-box"></span></label>
+     Day 52
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/4/22">Numbers 22</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/4/23">Numbers 23</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/4/24">Numbers 24</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="dark">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb53" value="yes"><span class="check-box"></span></label>
+     Day 53
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/4/25">Numbers 25</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/4/26">Numbers 26</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="dark">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb54" value="yes"><span class="check-box"></span></label>
+     Day 54
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/4/27">Numbers 27</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/4/28">Numbers 28</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/4/29">Numbers 29</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="dark">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb55" value="yes"><span class="check-box"></span></label>
+     Day 55
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/4/30">Numbers 30</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/4/31">Numbers 31</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="dark">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb56" value="yes"><span class="check-box"></span></label>
+     Day 56
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/4/32">Numbers 32</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/4/33">Numbers 33</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="dark">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb57" value="yes"><span class="check-box"></span></label>
+     Day 57
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/4/34">Numbers 34</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/4/35">Numbers 35</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/4/36">Numbers 36</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+<!-- DEUTERONOMY -->
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="dark">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb58" value="yes"><span class="check-box"></span></label>
+     Day 58
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/5/1">Deuteronomy 1</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/5/2">Deuteronomy 2</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="dark">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb59" value="yes"><span class="check-box"></span></label>
+     Day 59
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/5/3">Deuteronomy 3</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/5/4">Deuteronomy 4</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="dark">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb60" value="yes"><span class="check-box"></span></label>
+     Day 60
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/5/5">Deuteronomy 5</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/5/6">Deuteronomy 6</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/5/7">Deuteronomy 7</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="dark">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb61" value="yes"><span class="check-box"></span></label>
+     Day 61
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/5/8">Deuteronomy 8</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/5/9">Deuteronomy 9</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/5/10">Deuteronomy 10</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="dark">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb62" value="yes"><span class="check-box"></span></label>
+     Day 62
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/5/11">Deuteronomy 11</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/5/12">Deuteronomy 12</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/5/13">Deuteronomy 13</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="dark">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb63" value="yes"><span class="check-box"></span></label>
+     Day 63
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/5/14">Deuteronomy 14</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/5/15">Deuteronomy 15</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/5/16">Deuteronomy 16</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/5/17">Deuteronomy 17</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="dark">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb64" value="yes"><span class="check-box"></span></label>
+     Day 64
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/5/18">Deuteronomy 18</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/5/19">Deuteronomy 19</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/5/20">Deuteronomy 20</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="dark">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb65" value="yes"><span class="check-box"></span></label>
+     Day 65
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/5/21">Deuteronomy 21</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/5/22">Deuteronomy 22</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/5/23">Deuteronomy 23</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="dark">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb66" value="yes"><span class="check-box"></span></label>
+     Day 66
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/5/24">Deuteronomy 24</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/5/25">Deuteronomy 25</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/5/26">Deuteronomy 26</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="dark">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb67" value="yes"><span class="check-box"></span></label>
+     Day 67
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/5/27">Deuteronomy 27</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/5/28">Deuteronomy 28</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="dark">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb68" value="yes"><span class="check-box"></span></label>
+     Day 68
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/5/29">Deuteronomy 29</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/5/30">Deuteronomy 30</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/5/31">Deuteronomy 31</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="dark">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb69" value="yes"><span class="check-box"></span></label>
+     Day 69
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/5/32">Deuteronomy 32</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/5/33">Deuteronomy 33</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/5/34">Deuteronomy 34</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+
+<!-- JOSHUA -->
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="light">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb70" value="yes"><span class="check-box"></span></label>
+     Day 70
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/6/1">Joshua 1</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/6/2">Joshua 2</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/6/3">Joshua 3</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/6/4">Joshua 4</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="light">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb71" value="yes"><span class="check-box"></span></label>
+     Day 71
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/6/5">Joshua 5</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/6/6">Joshua 6</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/6/7">Joshua 7</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="light">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb72" value="yes"><span class="check-box"></span></label>
+     Day 72
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/6/8">Joshua 8</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/6/9">Joshua 9</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="light">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb73" value="yes"><span class="check-box"></span></label>
+     Day 73
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/6/10">Joshua 10</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/6/11">Joshua 11</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="light">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb74" value="yes"><span class="check-box"></span></label>
+     Day 74
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/6/12">Joshua 12</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/6/13">Joshua 13</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/6/14">Joshua 14</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="light">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb75" value="yes"><span class="check-box"></span></label>
+     Day 75
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/6/15">Joshua 15</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/6/16">Joshua 16</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/6/17">Joshua 17</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="light">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb76" value="yes"><span class="check-box"></span></label>
+     Day 76
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/6/18">Joshua 18</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/6/19">Joshua 19</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/6/20">Joshua 20</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="light">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb77" value="yes"><span class="check-box"></span></label>
+     Day 77
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/6/21">Joshua 21</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/6/22">Joshua 22</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="light">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb78" value="yes"><span class="check-box"></span></label>
+     Day 78
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/6/23">Joshua 23</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/6/24">Joshua 24</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+
+<!-- JUDGES -->
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="light">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb79" value="yes"><span class="check-box"></span></label>
+     Day 79
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/7/1">Judges 1</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/7/2">Judges 2</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/7/3">Judges 3</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="light">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb80" value="yes"><span class="check-box"></span></label>
+     Day 80
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/7/4">Judges 4</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/7/5">Judges 5</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/7/6">Judges 6</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="light">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb81" value="yes"><span class="check-box"></span></label>
+     Day 81
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/7/7">Judges 7</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/7/8">Judges 8</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="light">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb82" value="yes"><span class="check-box"></span></label>
+     Day 82
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/7/9">Judges 9</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/7/10">Judges 10</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="light">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb83" value="yes"><span class="check-box"></span></label>
+     Day 83
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/7/11">Judges 11</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/7/12">Judges 12</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/7/13">Judges 13</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="light">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb84" value="yes"><span class="check-box"></span></label>
+     Day 84
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/7/14">Judges 14</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/7/15">Judges 15</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/7/16">Judges 16</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="light">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb85" value="yes"><span class="check-box"></span></label>
+     Day 85
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/7/17">Judges 17</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/7/18">Judges 18</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/7/19">Judges 19</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="light">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb86" value="yes"><span class="check-box"></span></label>
+     Day 86
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/7/20">Judges 20</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/7/21">Judges 21</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+<!-- RUTH -->
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="light">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb87" value="yes"><span class="check-box"></span></label>
+     Day 87
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/8/1">Ruth 1</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/8/2">Ruth 2</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/8/3">Ruth 3</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/8/4">Ruth 4</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+<!-- 1 SAMUEL -->
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="light">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb88" value="yes"><span class="check-box"></span></label>
+     Day 88
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/9/1">1 Samuel 1</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/9/2">1 Samuel 2</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/9/3">1 Samuel 3</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="light">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb89" value="yes"><span class="check-box"></span></label>
+     Day 89
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/9/4">1 Samuel 4</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/9/5">1 Samuel 5</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/9/6">1 Samuel 6</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/9/7">1 Samuel 7</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="light">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb90" value="yes"><span class="check-box"></span></label>
+     Day 90
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/9/8">1 Samuel 8</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/9/9">1 Samuel 9</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/9/10">1 Samuel 10</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="light">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb91" value="yes"><span class="check-box"></span></label>
+     Day 91
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/9/11">1 Samuel 11</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/9/12">1 Samuel 12</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/9/13">1 Samuel 13</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="light">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb92" value="yes"><span class="check-box"></span></label>
+     Day 92
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/9/14">1 Samuel 14</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/9/15">1 Samuel 15</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="light">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb93" value="yes"><span class="check-box"></span></label>
+     Day 93
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/9/16">1 Samuel 16</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/9/17">1 Samuel 17</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="light">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb94" value="yes"><span class="check-box"></span></label>
+     Day 94
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/9/18">1 Samuel 18</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/9/19">1 Samuel 19</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/9/20">1 Samuel 20</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="light">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb95" value="yes"><span class="check-box"></span></label>
+     Day 95
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/9/21">1 Samuel 21</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/9/22">1 Samuel 22</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/9/23">1 Samuel 23</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/9/24">1 Samuel 24</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="light">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb96" value="yes"><span class="check-box"></span></label>
+     Day 96
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/9/25">1 Samuel 25</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/9/26">1 Samuel 26</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/9/27">1 Samuel 27</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="light">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb97" value="yes"><span class="check-box"></span></label>
+     Day 97
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/9/28">1 Samuel 28</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/9/29">1 Samuel 29</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/9/30">1 Samuel 30</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/9/31">1 Samuel 31</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+
+<!-- 2 SAMUEL -->
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="light">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb98" value="yes"><span class="check-box"></span></label>
+     Day 98
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/10/1">2 Samuel 1</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/10/2">2 Samuel 2</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/10/3">2 Samuel 3</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="light">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb99" value="yes"><span class="check-box"></span></label>
+     Day 99
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/10/4">2 Samuel 4</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/10/5">2 Samuel 5</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/10/6">2 Samuel 6</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/10/7">2 Samuel 7</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="light">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb100" value="yes"><span class="check-box"></span></label>
+     Day 365
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/10/8">2 Samuel 8</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/10/9">2 Samuel 9</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/10/10">2 Samuel 10</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/10/11">2 Samuel 11</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="light">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb101" value="yes"><span class="check-box"></span></label>
+     Day 101
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/10/12">2 Samuel 12</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/10/13">2 Samuel 13</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="light">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb102" value="yes"><span class="check-box"></span></label>
+     Day 102
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/10/14">2 Samuel 14</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/10/15">2 Samuel 15</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="light">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb103" value="yes"><span class="check-box"></span></label>
+     Day 103
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/10/16">2 Samuel 16</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/10/17">2 Samuel 17</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="light">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb104" value="yes"><span class="check-box"></span></label>
+     Day 104
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/10/18">2 Samuel 18</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/10/19">2 Samuel 19</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="light">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb105" value="yes"><span class="check-box"></span></label>
+     Day 105
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/10/20">2 Samuel 20</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/10/21">2 Samuel 21</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/10/22">2 Samuel 22</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="light">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb106" value="yes"><span class="check-box"></span></label>
+     Day 106
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/10/23">2 Samuel 23</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/10/24">2 Samuel 24</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+<!-- 1 KINGS -->
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="light">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb107" value="yes"><span class="check-box"></span></label>
+     Day 107
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/10/1">1 Kings </a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="light">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb108" value="yes"><span class="check-box"></span></label>
+     Day 108
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/10/2">1 Kings 2</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/10/3">1 Kings 3</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="light">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb109" value="yes"><span class="check-box"></span></label>
+     Day 109
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/10/4">1 Kings 4</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/10/5">1 Kings 5</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/10/6">1 Kings 6</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="light">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb110" value="yes"><span class="check-box"></span></label>
+     Day 110
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/10/7">1 Kings 7</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="light">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb111" value="yes"><span class="check-box"></span></label>
+     Day 111
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/10/8">1 Kings 8</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="light">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb112" value="yes"><span class="check-box"></span></label>
+     Day 112
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/10/9">1 Kings 9</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/10/10">1 Kings 10</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="light">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb113" value="yes"><span class="check-box"></span></label>
+     Day 113
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/10/11">1 Kings 11</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/10/12">1 Kings 12</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="light">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb114" value="yes"><span class="check-box"></span></label>
+     Day 114
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/10/13">1 Kings 13</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/10/14">1 Kings 14</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="light">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb115" value="yes"><span class="check-box"></span></label>
+     Day 115
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/10/15">1 Kings 15</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/10/16">1 Kings 16</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/10/17">1 Kings 17</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="light">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb116" value="yes"><span class="check-box"></span></label>
+     Day 116
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/10/18">1 Kings 18</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/10/19">1 Kings 19</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="light">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb117" value="yes"><span class="check-box"></span></label>
+     Day 117
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/10/20">1 Kings 20</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/10/21">1 Kings 21</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="light">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb118" value="yes"><span class="check-box"></span></label>
+     Day 118
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/10/22">1 Kings 22</a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/11/1">2 Kings 1</a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+<!-- BLANK TEMPLATE -->
+<div class="div-inner">
+ <ul>
+  <li>
+   <a href="#">
+    <button class="light">
+     <label class="tasks-list-item"><input type="checkbox" class="tasks-list-cb" name="cb" value="yes"><span class="check-box"></span></label>
+     blank
+    </button>
+   </a>
+   <ul>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/10/"> </a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/10/"> </a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/10/"> </a></li>
+    <li><a href="https://wol.jw.org/ase/wol/b/r266/lp-asl/nwt/10/"> </a></li>
+   </ul>        
+  </li>
+ </ul>
+</div>
+
+<!--
+<h2 id="chrono">CHRONOLOGICAL</h2>
+This section is under construction
+
+<h2 id="theme">THEMATIC</h2>
+This section is under construction
+
+<h2 id="info">information</h2>
+This section is under construction
+
+<div class="footer">
+<div class="iconspace">
+  <span><a href="#top"><img class="icon" src="https://i.imgur.com/UFeleHO.png"></a></span>
+  <span><a href="#chrono"><img class="icon" src="https://i.imgur.com/Y6dqrfB.png"></a></span>
+  <span><a href="#theme"><img class="icon" src="https://i.imgur.com/DlQqt9b.png"></a></span>
+  <span><a href="#info"><img class="icon" src="https://i.imgur.com/Q7BTTxe.png"></a></span>
+ </div>
+</div>
+END FOOTER -->
+
+</div>
+
+<script>
+var offset = $(':target').offset();
+var scrollto = offset.top - 200; // minus fixed header height
+$('html, body').animate({scrollTop:scrollto}, 0);
+</script>
+
+<!-- START CHECKBOX SCRIPT -->
+<script>
+// Avoid scoping issues by encapsulating code inside anonymous function
+(function() {
+  // variable to store our current state
+  var cbstate;
+  
+  // bind to the onload event
+  window.addEventListener('load', function() {
+    // Get the current state from localstorage
+    // State is stored as a JSON string
+    cbstate = JSON.parse(localStorage['CBState'] || '{}');
+  
+    // Loop through state array and restore checked 
+    // state for matching elements
+    for(var i in cbstate) {
+      var el = document.querySelector('input[name="' + i + '"]');
+      if (el) el.checked = true;
+    }
+  
+    // Get all checkboxes that you want to monitor state for
+    var cb = document.getElementsByClassName('tasks-list-cb');
+  
+    // Loop through results and ...
+    for(var i = 0; i < cb.length; i++) {
+  
+      //bind click event handler
+      cb[i].addEventListener('click', function(evt) {
+        // If checkboxe is checked then save to state
+        if (this.checked) {
+          cbstate[this.name] = true;
+        }
+    
+    // Else remove from state
+        else if (cbstate[this.name]) {
+          delete cbstate[this.name];
+        }
+    
+    // Persist state
+        localStorage.CBState = JSON.stringify(cbstate);
+      });
+    }
+  });
+})();
+</script>
+<!-- CHECKBOX SCRIPT -->
+
+</body>
+</html>
+
