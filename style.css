@@ -1,0 +1,244 @@
+html {
+ scroll-padding-top: 150px; /* height of sticky header */
+}
+body {
+ margin-top: 15vw;
+ margin-left: 5px;
+ margin-right: 5vw;
+ margin-bottom: 250px;
+ font-family: trebuchet ms, arial, verdana, sans-serif;
+ text-decoration: none;
+ background: #F1F1F1;
+}
+.div-outter {
+ display: flex;
+ flex-wrap: wrap;
+ margin-top: 50px;
+ margin-left: 0;
+ margin-right: 0;
+ margin-bottom: 0;
+}
+.header {
+ width: 100%;
+ height: auto;
+ padding: 8px;
+ overflow: hidden;
+ position: fixed;
+ top: 0;
+ left: 0;
+ z-index: 2;
+ background-color: #FFFFFF;
+ float: left;
+ font-size: 6vw;
+ color: #000000;
+ text-transform: uppercase;
+ text-align: center;
+ vertical-align: middle;
+ -webkit-box-shadow: 0 4px 4x rgba(0, 0, 0, 0.2);
+ -moz-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+ box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+}
+.header:before {
+ content:'';
+ display:inline-block;
+ height:100%;
+ vertical-align:middle;
+}
+.section {
+ width: 100%;
+ height: auto;
+ margin-top: 5vw;
+ margin-left: 0;
+ margin-right: 0;
+ margin-bottom: 0;
+ font-size: 5vw;
+ color: #000000;
+ text-transform: uppercase;
+background: pink;
+}
+.oldnew {
+width: 100%;
+height: auto;
+ margin-top: 5vw;
+ margin-left: 0;
+ margin-right: 0;
+ margin-bottom: -50px;
+ font-size: 4vw;
+ color: #000000;
+ text-transform: uppercase;
+background: pink;
+}
+.div-inner {
+ display: block;
+ justify-content: space-between;
+ margin-top: 0px;
+ padding: 1px 1px;
+ border: none;
+}
+button, .dark, .mid, .dark {
+ max-width: 100%;
+ width: 12vw;
+ height: 12vw;
+ margin: 0;
+ padding: 2px;
+ line-height: 18vw;
+ border: none;
+ color: #FFFFFF;
+ text-align: center;
+ font-size: 3vw;
+ font-family: trebuchet ms, arial, verdana, sans-serif;
+}
+button.dark {
+ background-color: #1167b1;
+}
+button.mid {
+ background-color: #0086e4;
+}
+button.light {
+ background-color: #42b0ff;
+}
+
+button:hover, button:focus {
+ background-color: #024d8e;
+}
+
+/* BOTTOM MENU */
+.footer {
+ width: 100%;
+ height: auto;
+ padding: 8px;
+ overflow: hidden;
+ position: fixed;
+ bottom: 0;
+ left: 0;
+ z-index: 1;
+ background-color: #D8D8D8;
+ text-align: center;
+ -webkit-box-shadow: 0 -1px 4x rgba(0, 0, 0, 0.07);
+ -moz-box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.07);
+ box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.07);
+}
+.iconspace {
+ width: auto;
+ height: auto;
+ padding-left: 10%;
+ padding-right: 10%;
+ text-align: justify;
+}
+.footer:after { 
+ content: ' ';
+ display: inline-block;
+
+}
+.iconspace > span {
+ display: inline-block;
+} 
+.icon {
+ width: 10vw;
+ height: 10vw;
+ margin-left: 5%;
+ margin-right: 5%;
+ padding: 0;
+ vertical-align: middle;
+ opacity: 50%;
+}
+.icon:hover, icon:focus {
+ width: 10vw;
+ height: 10vw;
+ margin-left: 5%;
+ margin-right: 5%;
+ padding: 0;
+ vertical-align: middle;
+ opacity: 100%;
+}
+
+/* SUBMENU */
+ul {
+ margin: 0;
+ padding: 0;
+ position: relative;
+ list-style: none;
+}
+/* submenu box */
+ul ul {
+ display: none;
+ position: absolute; 
+ top: 100%;
+ left: 0%; 
+ z-index: 2;
+ border: 1px solid #FFFFFF;
+ background: rgba(0, 0, 0, 0.8);
+ white-space: nowrap;
+}	
+
+ul li:hover > ul {
+ display: inherit;
+}	
+
+/* submenu links */
+ul ul li a {
+ margin: 0;
+ font-size: 3vw;
+padding: 10px;
+ color: #FFFFFF;
+ text-decoration: none;
+ border: none;
+ display: inherit;
+}
+ul ul li a:hover {
+ color: #39ca74;
+/* background-color: pink; */
+}
+
+
+/* green checkbox styles */
+.tasks-list-item {
+ padding-right: 20px;
+ cursor: pointer;
+ -webkit-user-select: none;
+ -moz-user-select: none;
+ -ms-user-select: none;
+ user-select: none;
+ float: left;
+}
+ .tasks-list-item + .tasks-list-item {
+}
+.tasks-list-cb {
+ display: none;
+}
+.check-box {
+ position: absolute;
+ top: 5%;
+ left: 5%;
+ display: block;
+ margin: 0px;
+ width: 20px;
+ height: 20px;
+ border: 2px solid #000;
+ border-radius: 24px;
+background-color: #FFFFFF;
+}
+
+.check-box:before {
+ content: '';
+ display: none;
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ margin: -8px 0 0 -10px;
+ height: 8px;
+ width: 16px;
+ border: solid #39ca74;
+ border-width: 0 0 4px 4px;
+ -webkit-transform: rotate(-45deg);
+ -moz-transform: rotate(-45deg);
+ -ms-transform: rotate(-45deg);
+ -o-transform: rotate(-45deg);
+ transform: rotate(-45deg);
+}
+.tasks-list-cb:checked ~ .check-box {
+ border-color: #000000;
+}
+.tasks-list-cb:checked ~ .check-box:before {
+ display: block;
+} */
