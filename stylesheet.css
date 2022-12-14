@@ -72,20 +72,20 @@ font-weight: bold;
  display: block;
  justify-content: space-between;
  margin-top: 0px;
- padding: 1px 1px;
+ padding: 2px 2px;
  border: none;
 }
 button, .dark, .mid, .dark {
  max-width: 100%;
- width: 14vw;
- height: 14vw;
+ width: 15vw;
+ height: 15vw;
  margin: 0;
  padding: 2px;
- line-height: 22vw;
+ line-height: 24vw;
  border: none;
  color: #FFFFFF;
  text-align: center;
- font-size: 3vw;
+ font-size: 4vw;
  font-family: trebuchet ms, arial, verdana, sans-serif;
 }
 button.dark {
@@ -212,8 +212,8 @@ ul ul li a:hover {
  left: 1vw;
  display: block;
  margin: 0px;
- width: 2vw;
- height: 2vw;
+ width: 3.5vw;
+ height: 3.5vw;
  border: 2px solid #000;
  border-radius: 24px;
 background-color: #FFFFFF;
