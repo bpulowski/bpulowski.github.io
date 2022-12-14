@@ -9,9 +9,9 @@ html {
  scroll-padding-top: 150px; /* height of sticky header */
 }
 body {
- margin-top: 150px;
- margin-left: 0;
- margin-right: 0;
+ margin-top: 75px;
+ margin-left: 5px;
+ margin-right: 5%;
  margin-bottom: 250px;
  font-family: trebuchet ms, arial, verdana, sans-serif;
  text-decoration: none;
@@ -20,14 +20,19 @@ body {
 .div-outter {
  display: flex;
  flex-wrap: wrap;
- padding-top: 50px;
- padding-left: 5px;
- padding-right: 50px;
- padding-bottom: 0;
+ margin-top: 50px;
+ margin-left: 0;
+ margin-right: 0;
+ margin-bottom: 0;
+ background: pink;
+}
+.spacer {
+width: 100%;
+height: 50px;
 }
 .header {
  width: 100%;
- height: 100px;
+ height: 50px;
  position: fixed;
  top: 0;
  left: 0;
@@ -43,37 +48,30 @@ h1 {
  margin: 0;
  padding: 0;
  text-align: center;
- line-height: 100px;
- font-size: 50px;
+ line-height: 50px;
+ font-size: 40px;
  color: #000000;
  text-transform: uppercase;
 }
 h2 {
- margin-top: 50px;
- margin-left: 50px;
+ margin-top: 0;
+ margin-left: 0;
  margin-right: 0;
- margin-bottom: 50;
- font-size: 40px;
+ margin-bottom: -25px;
+ font-size: 25px;
  color: #000000;
  text-transform: uppercase;
+ background: blue;
 }
 h3 {
- margin-top: 0px;
- margin-left: 50px;
+ margin-top: 0;
+ margin-left: 0;
  margin-right: 0;
  margin-bottom: -50px;
- font-size: 30px;
+ font-size: 20px;
  color: #000000;
  text-transform: uppercase;
-}
-h4 {
- margin-top: 50px;
- margin-left: 50px;
- margin-right: 0;
- margin-bottom: 0;
- font-size: 40px;
- color: #000000;
- text-transform: uppercase;
+ background: orange;
 }
 .div-inner {
  display: block;
@@ -265,7 +263,7 @@ background-color: #FFFFFF;
 <!-- START COVER TO COVER SECTION -->
 
 <h2>COVER TO COVER</h2>
-</div>
+<div class="spacer"></div>
 <h3>Hebrew-Aramaic Scriptures</h3>
 
 <div class="div-outter">
@@ -5182,11 +5180,10 @@ background-color: #FFFFFF;
   </li>
  </ul>
 </div>
-
 </div>
 
 <!-- SPACER -->
-<div class="div-outter"></div>
+<div class="spacer"></div>
 
 <h3>Christian Greek Scriptures</h3>
 
@@ -5229,21 +5226,22 @@ background-color: #FFFFFF;
  </ul>
 </div>
 -->
-
-
-<h4 id="chrono">CHRONOLOGICAL</h4>
+<div class="spacer"></div>
+<h2 id="chrono">CHRONOLOGICAL</h2>
 <div class="div-outter">
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <img width="200px" height="200px" src="https://i.imgur.com/C8f51j1.png">
 </div>
 
-<h4 id="theme">THEMATIC</h4>
+<div class="spacer"></div>
+<h2 id="theme">THEMATIC</h2>
 <div class="div-outter">
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <img width="200px" height="200px" src="https://i.imgur.com/C8f51j1.png">
 </div>
 
-<h4 id="info">information</h4>
+<div class="spacer"></div>
+<h2 id="info">information</h2>
 <div class="div-outter">
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <img width="200px" height="200px" src="https://i.imgur.com/C8f51j1.png">
