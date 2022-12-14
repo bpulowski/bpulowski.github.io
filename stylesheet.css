@@ -75,11 +75,11 @@ height: auto;
 }
 button, .dark, .mid, .dark {
  max-width: 100%;
- width: 12vw;
- height: 12vw;
+ width: 14vw;
+ height: 14vw;
  margin: 0;
  padding: 2px;
- line-height: 18vw;
+ line-height: 22vw;
  border: none;
  color: #FFFFFF;
  text-align: center;
