@@ -28,7 +28,7 @@ body {
 }
 .spacer {
 width: 100%;
-height: 50px;
+height: 25px;
 }
 .header {
  width: 100%;
@@ -79,7 +79,6 @@ h3 {
  margin-top: 0px;
  padding: 1px 1px;
  border: none;
-
 }
 button, .dark, .mid, .dark {
  max-width: 100%;
@@ -111,13 +110,13 @@ button:hover, button:focus {
 /* BOTTOM MENU */
 .footer {
  width: 100%;
- height: 140px;
+ height: 100px;
  position: fixed;
  bottom: 0;
  left: 0;
  z-index: 1;
  background-color: #D8D8D8;
- line-height: 140px;
+ line-height: 100px;
  text-align: center;
  -webkit-box-shadow: 0 -1px 4x rgba(0, 0, 0, 0.07);
  -moz-box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.07);
@@ -134,27 +133,28 @@ button:hover, button:focus {
  content: ' ';
  display: inline-block;
  width: 100%;
- height: 0
+ height: 0;
 }
 .iconspace > span {
  display: inline-block;
 } 
 .icon {
- width: 100px;
- height: 100px;
+ width: 75px;
+ height: 75px;
  margin: 0;
  padding: 0;
  vertical-align: middle;
  opacity: 50%;
 }
 .icon:hover, icon:focus {
- width: 100px;
- height: 100px;
+ width: 75px;
+ height: 75px;
  margin: 0;
  padding: 0;
  vertical-align: middle;
  opacity: 100%;
 }
+
 /* SUBMENU */
 ul {
  margin: 0;
@@ -162,13 +162,12 @@ ul {
  position: relative;
  list-style: none;
 }
-
 /* submenu box */
 ul ul {
  display: none;
  position: absolute; 
- top: 90%;
- left: 10%; 
+ top: 100%;
+ left: 0%; 
  z-index: 2;
  border: 1px solid #FFFFFF;
  background: rgba(0, 0, 0, 0.8);
@@ -182,11 +181,8 @@ ul li:hover > ul {
 /* submenu links */
 ul ul li a {
  margin: 0;
- font-size: 40px;
- padding-top: 20px;
- padding-left: 40px;
- padding-right: 80px;
- padding-bottom: 20px;
+ font-size: 20px;
+padding: 10px;
  color: #FFFFFF;
  text-decoration: none;
  border: none;
@@ -256,13 +252,14 @@ background-color: #FFFFFF;
 
 <!-- HEADER -->
 <div class="header">
-<h1>header</h1>
+<h1>The Bible in a Year</h1>
 </div>
 
 
 <!-- START COVER TO COVER SECTION -->
 
 <h2>COVER TO COVER</h2>
+<div class="spacer"></div>
 <div class="spacer"></div>
 <h3>Hebrew-Aramaic Scriptures</h3>
 
@@ -5247,7 +5244,6 @@ background-color: #FFFFFF;
 <img width="200px" height="200px" src="https://i.imgur.com/C8f51j1.png">
 </div>
 
-<!--
 <div class="footer">
 <div class="iconspace">
   <span><a href="#top"><img class="icon" src="https://i.imgur.com/UFeleHO.png"></a></span>
@@ -5256,7 +5252,6 @@ background-color: #FFFFFF;
   <span><a href="#info"><img class="icon" src="https://i.imgur.com/Q7BTTxe.png"></a></span>
  </div>
 </div>
-END FOOTER -->
 
 </div>
 
@@ -5315,4 +5310,3 @@ $('html, body').animate({scrollTop:scrollto}, 0);
 
 </body>
 </html>
-
