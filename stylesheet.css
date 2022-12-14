@@ -136,8 +136,8 @@ button:hover, button:focus {
 .icon {
  width: 14vw;
  height: 14vw;
- margin-left: 5%;
- margin-right: 5%;
+ margin-left: 2%;
+ margin-right: 2%;
  padding: 0;
  vertical-align: middle;
  opacity: 50%;
@@ -145,8 +145,8 @@ button:hover, button:focus {
 .icon:hover, icon:focus {
  width: 14vw;
  height: 14vw;
- margin-left: 5%;
- margin-right: 5%;
+ margin-left: 2%;
+ margin-right: 2%;
  padding: 0;
  vertical-align: middle;
  opacity: 100%;
