@@ -98,10 +98,9 @@ button.light {
  background-color: #42b0ff;
 }
 
-button:hover, button:focus {
+button:hover {
  background-color: #024d8e;
 }
-
 /* BOTTOM MENU */
 .footer {
  width: 100%;
@@ -121,8 +120,8 @@ button:hover, button:focus {
 .iconspace {
  width: auto;
  height: auto;
- padding-left: 10%;
- padding-right: 10%;
+ padding-left: ;
+ padding-right: ;
  text-align: justify;
 }
 .footer:after { 
@@ -136,8 +135,8 @@ button:hover, button:focus {
 .icon {
  width: 14vw;
  height: 14vw;
- margin-left: 2%;
- margin-right: 2%;
+ margin-left: 4vw;
+ margin-right: 4vw;
  padding: 0;
  vertical-align: middle;
  opacity: 50%;
@@ -145,8 +144,8 @@ button:hover, button:focus {
 .icon:hover, icon:focus {
  width: 14vw;
  height: 14vw;
- margin-left: 2%;
- margin-right: 2%;
+ margin-left: 4vw;
+ margin-right: 4vw;
  padding: 0;
  vertical-align: middle;
  opacity: 100%;
@@ -178,7 +177,7 @@ ul li:hover > ul {
 /* submenu links */
 ul ul li a {
  margin: 0;
- font-size: 3vw;
+ font-size: 3.5vw;
 padding: 10px;
  color: #FFFFFF;
  text-decoration: none;
@@ -222,11 +221,11 @@ background-color: #FFFFFF;
  content: '';
  display: none;
  position: absolute;
- top: 0.4vw;
+ top: 0.8vw;
  left: 0.2vw;
  margin: 0 0 0 0;
- height: 1.5vw;
- width: 3vw;
+ height: 1vw;
+ width: 2.5vw;
  border: solid #39ca74;
  border-width: 0 0 .5vw .5vw;
  -webkit-transform: rotate(-45deg);
