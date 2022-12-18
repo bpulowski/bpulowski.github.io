@@ -93,7 +93,7 @@ button:hover {
 .footer {
  width: 100%;
  height: auto;
- padding: 8px;
+ padding: 0;
  overflow: hidden;
  position: fixed;
  bottom: 0;
@@ -104,36 +104,28 @@ button:hover {
  -webkit-box-shadow: 0 -1px 4x rgba(0, 0, 0, 0.07);
  -moz-box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.07);
  box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.07);
-}
-.iconspace {
- width: auto;
- height: auto;
- padding: 0;
- text-align: justify;
+display: table;
 }
 .footer:after { 
  content: ' ';
- display: inline-block;
-
 }
-.iconspace > span {
- display: inline-block;
+.footer > span {
+ display: table-cell;
+text-align: center;
 } 
 .icon {
- width: 12vw;
- height: 12vw;
- margin: 0 4vw 0 4vw;
+ width: auto;
+ height: 14vw;
+ margin: 0;
  padding: 0;
  vertical-align: middle;
- opacity: 60%;
 }
 .icon:hover, icon:focus {
- width: 12vw;
- height: 12vw;
- margin: 0 4vw 0 4vw;
+ width: auto;
+ height: 14vw;
+ margin: 0;
  padding: 0;
  vertical-align: middle;
- opacity: 100%;
 }
 
 /* SUBMENU */
@@ -223,4 +215,15 @@ background-color: #FFFFFF;
 }
 .tasks-list-cb:checked ~ .check-box:before {
  display: block;
+}
+
+
+.card {
+ width: 130px;
+ height: 195px;
+ background: url("/examples/images/card-back.jpg") no-repeat;
+ margin: 50px;
+}
+.card:hover {
+ background: url("/examples/images/card-front.jpg") no-repeat;
 }
